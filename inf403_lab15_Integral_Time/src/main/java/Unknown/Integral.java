@@ -4,6 +4,9 @@ import java.util.function.Consumer;
 
 public class Integral implements Consumer<Double> {
 
+
+
+
     private static int N;
     private volatile double integral = 0;
 
@@ -14,10 +17,11 @@ public class Integral implements Consumer<Double> {
 
     public static void main(String[] args) throws InterruptedException {
         // [1, 3]
+        long start = System.nanoTime();
         Integral integralObject = new Integral();
-        int countProc = Runtime.getRuntime().availableProcessors();;
+        int countProc = Runtime.getRuntime().availableProcessors();; //Определяет количество доступных процессоров
         N = 10000 / countProc; // кол-во "Столбиков" для суммирования задачей
-        double h = (3.0 - 1.0) / countProc;
+        double h = (3.0 - 1.0) / countProc; //ширина каждого подынтервала, на который разбивается основной интервал интегрирования
         Thread[] t = new Thread[countProc];
         for (int i = 0; i < countProc; i++) {
             t[i] = new Thread(new PartSumCalculate(1 + i * h, 1 + (i + 1) * h, integralObject));
@@ -30,6 +34,8 @@ public class Integral implements Consumer<Double> {
         
         
         System.out.println(integralObject.integral);
+        long end = System.nanoTime();
+        System.out.println(end - start);
     }
 
     public static double func(double x) {
