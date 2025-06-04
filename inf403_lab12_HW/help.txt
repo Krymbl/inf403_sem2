@@ -1,0 +1,48 @@
+public static void copyUpper(String fileName)
+
+Объявление метода copyUpper, который принимает имя файла (fileName) в качестве аргумента.
+
+try(InputStream fis = new FileInputStream(fileName); OutputStream fos = new FileOutputStream("PushkinUpper.txt"))
+
+Используется try-with-resources для автоматического закрытия потоков после выполнения.
+
+InputStream fis – поток для чтения из исходного файла (fileName).
+
+OutputStream fos – поток для записи в новый файл PushkinUpper.txt.
+
+byte[] buffer = new byte[1024];
+
+Создаётся буфер размером 1024 байта для чтения данных из файла.
+
+int r;
+
+Переменная r будет хранить количество прочитанных байтов.
+
+while ((r = fis.read(buffer)) > -1)
+
+Чтение данных из fis в буфер buffer.
+
+r содержит количество прочитанных байт (или -1, если достигнут конец файла).
+
+string = new String(buffer, 0, r).toUpperCase();
+
+Преобразует прочитанные байты (buffer от 0 до r) в строку и переводит её в верхний регистр.
+
+fos.write(string.getBytes(StandardCharsets.UTF_8));
+
+Записывает преобразованную строку (в байтах, UTF-8) в выходной файл PushkinUpper.txt.
+
+System.out.println(string);
+
+Выводит преобразованную строку в консоль.
+
+fos.flush();
+
+Принудительно сбрасывает буфер вывода, чтобы все данные записались в файл.
+
+} catch (IOException e) { e.printStackTrace(); }
+
+Обработка возможных ошибок ввода-вывода (например, если файл не найден).
+
+Итог:
+Метод читает файл fileName, переводит его содержимое в верхний регистр и сохраняет результат в PushkinUpper.txt, параллельно выводя данные в консоль.

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="inf403_lab07_MAP_HW_" />
+        <module name="testMine" />
+        <module name="inf403_lab03HW" />
+        <module name="inf403_lab02HW2" />
+        <module name="Inf403_lab12" />
+        <module name="inf403_lab02HW" />
+        <module name="Inf403_lab14" />
+        <module name="inf403_lab17_musikPlayer" />
+        <module name="inf403_lab08" />
+        <module name="inf403_lab09_GRAPG_HW" />
+        <module name="inf403_lab16" />
+        <module name="inf403_lab04" />
+        <module name="inf403_lab15" />
+        <module name="inf403_lab18" />
+        <module name="inf403_lab12_HW" />
+        <module name="inf403_lab01" />
+        <module name="inf403_lab03" />
+        <module name="inf403_lab13" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Dopka" target="23" />
+      <module name="inf403_lab02_HW" target="23" />
+      <module name="Inf403_lab05_Transport" target="23" />
+      <module name="inf403_lab06" target="23" />
+      <module name="inf403_lab07_MAP_HW" target="23" />
+      <module name="inf403_lab07_MAP_HW2" target="23" />
+      <module name="inf403_lab09" target="23" />
+      <module name="Temp" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

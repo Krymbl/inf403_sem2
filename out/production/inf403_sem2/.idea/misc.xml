@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/inf403_lab01/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab02/pom.xml" />
+        <option value="$PROJECT_DIR$/Dopka/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab02HW/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab02HW2/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab03/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab03HW/pom.xml" />
+        <option value="$PROJECT_DIR$/testMine/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab04/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab06/pom.xml" />
+        <option value="$PROJECT_DIR$/Inf403_lab05/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab07/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab08/pom.xml" />
+        <option value="$PROJECT_DIR$/Temp/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab09/pom.xml" />
+        <option value="$PROJECT_DIR$/Inf403_lab12/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab13/pom.xml" />
+        <option value="$PROJECT_DIR$/Inf403_lab14/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab12_HW/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab15/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab16/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab17/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab17_musikPlayer/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab09_GRAPG_HW/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab07_MAP_HW2/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab07_MAP_HW_/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Dopka/pom.xml" />
+        <option value="$PROJECT_DIR$/Temp/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab06/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab07_MAP_HW2/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab09/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab17/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
