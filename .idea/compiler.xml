@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="inf403_GameSave_HW" />
         <module name="inf403_lab07_MAP_HW_" />
         <module name="testMine" />
         <module name="inf403_lab03HW" />
@@ -22,6 +23,7 @@
         <module name="inf403_lab18" />
         <module name="inf403_lab12_HW" />
         <module name="inf403_lab01" />
+        <module name="inf403_lab10_Stream" />
         <module name="inf403_lab03" />
         <module name="inf403_lab13" />
       </profile>
