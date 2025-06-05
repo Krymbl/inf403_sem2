@@ -13,15 +13,15 @@ public class Graph implements Iterable<Character> {
         graph.put('d', new HashSet<>());
         graph.put('a', new HashSet<>(Set.of('d', 'c')));
         graph.put('f', new HashSet<>(Set.of('d')));
-        graph.put('g', new HashSet<>(Set.of('d')));
+        graph.put('g', new HashSet<>(Set.of('d', 'c', 'f')));
         graph.put('c', new HashSet<>());
         graph.put('b', new HashSet<>(Set.of('g', 'f', 'c', 'a')));
     }
     // {{d, null}}}
     //res: {d,
     public Set<Character> topolSort(){
-        Set<Character> res = new LinkedHashSet<>();
-        Map<Character, Set<Character>> temp = new HashMap<>();
+        Set<Character> res = new LinkedHashSet<>(); //результат сортировки (вершины в порядке топологической сортировки)
+        Map<Character, Set<Character>> temp = new HashMap<>(); //временная копия графа для работы.
 
         //копирование графа во временную структуру
         for (Map.Entry<Character, Set<Character>> elem: graph.entrySet()){

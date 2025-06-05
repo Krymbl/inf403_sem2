@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Console {
@@ -46,7 +45,27 @@ public class Console {
             case 1:
                 playlist.showAll();
                 break;
+            case 2:
+                System.out.println("Напишите название трека");
+                Scanner scanName = new Scanner(System.in);
+                String name = scanName.nextLine();
+                scanName.close();
+                playlist.findByName(name);
+                break;
+            case 3:
+                System.out.println("Напишите имя автора");
+                Scanner scanAuthor = new Scanner(System.in);
+                String author = scanAuthor.nextLine();
+                scanAuthor.close();
+                playlist.findByAuthor(author);
+                break;
             case 4:
+                System.out.println("Напишите номер трека");
+                Scanner scanNumber = new Scanner(System.in);
+                Integer number = scanNumber.nextInt();
+                scanNumber.close();
+                playlist.findByNumber(number);
+                break;
         }
         return true;
 
