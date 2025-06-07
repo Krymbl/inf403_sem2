@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ControlWork/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ControlWork/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dopka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dopka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Inf403_lab05_Transport/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Inf403_lab05_Transport/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Inf403_lab12/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Inf403_lab12/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Inf403_lab12_WithNetHW_Socket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Inf403_lab12_WithNetHW_Socket/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Inf403_lab14/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Inf403_lab14/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Temp/src/main/java" charset="UTF-8" />
@@ -29,6 +31,8 @@
     <file url="file://$PROJECT_DIR$/inf403_lab03HW/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_lab04/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_lab04/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/inf403_lab05_Transport_HW/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/inf403_lab05_Transport_HW/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_lab06/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_lab06/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/inf403_lab07_MAP_HW/src/main/java" charset="UTF-8" />

@@ -36,14 +36,13 @@ public class SetImpl<T> implements Set403<T> {
         }
     }
 
-    public T[] getAll(T[] c) {
-        T[] newVal = (T[])Array.newInstance(c.getClass().componentType(),size);
+    public T[] getAll() {
+        Object[] temp = new Object[size];
         for (int i = 0; i < size; i++) {
-            newVal[i] = (T)values[i];
+            temp[i]=values[i];
         }
-
-        System.out.println(newVal.getClass());
-        return newVal;
+        values = temp;
+        return (T[]) values;
     }
 
     @Override

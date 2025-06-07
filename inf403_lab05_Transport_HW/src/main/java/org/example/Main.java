@@ -16,13 +16,17 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        TransportService transportService = new TransportService("D:\\itis\\javaProject\\2Sem\\lab203\\transport.csv");
+        TransportService transportService = new TransportService("C:\\Users\\dasts\\Desktop\\Itis\\lol\\inf403_sem2\\transport.csv");
 
 
-        List403<Transport> list = transportService.readAll();
-        System.out.println(list);
+        List403Impl<Transport> list = transportService.readAll();
+        //System.out.println(list);
 
-        transportService.printWorkTime();
+        transportService.sortredNumber();
+
+        System.out.println("-----------------------");
+
+        transportService.sortredRouteNumber();
 
         System.out.println("-----------------------");
 
@@ -38,6 +42,5 @@ public class Main {
 
         System.out.println("-----------------------");
 
-        transportService.printParkNumber(list);
     }
 }

@@ -50,7 +50,7 @@ public class List403Impl<T> implements List403<T>{
     public int size(){
         return size;
     } //возвращает размер
-    public T indexOf(int position) throws IndexOutOfBoundsException {
+    public T get(int position) throws IndexOutOfBoundsException {
         if (position>size-1 || position<0) {
             throw new IndexOutOfBoundsException();
         } else {
@@ -66,7 +66,7 @@ public class List403Impl<T> implements List403<T>{
         return s.toString();
     }
 
-    public void set(int pos1, int pos2) {
+    public void swap(int pos1, int pos2) {
         T temp = array[pos1];
         array[pos1] = array[pos2];
         array[pos2] = temp;
@@ -76,7 +76,7 @@ public class List403Impl<T> implements List403<T>{
         for (int i = size()-1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (comparator.compare(array[i],array[j])<0) {
-                    set(i,j);
+                    swap(i,j);
                 }
             }
         }

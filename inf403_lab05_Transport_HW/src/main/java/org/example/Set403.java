@@ -7,7 +7,7 @@ public interface Set403<T> {
 
     void add(T element);
 
-    T[] getAll(T[] c);
+    T[] getAll();
 
     T remove(T element);
 
