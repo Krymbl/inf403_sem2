@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/inf403_lab15.iml" filepath="$PROJECT_DIR$/inf403_lab15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inf403_lab15_IntegralTime_HW/inf403_lab15_IntegralTime_HW.iml" filepath="$PROJECT_DIR$/inf403_lab15_IntegralTime_HW/inf403_lab15_IntegralTime_HW.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/inf403_sem2.iml" filepath="$PROJECT_DIR$/.idea/inf403_sem2.iml" />
     </modules>
   </component>

@@ -3,6 +3,7 @@ package mapIterator;
 import example.*;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class MapImplIterator<K,V> implements Map<K,V>, Iterable<Map.Entry<K,V>> {
 
@@ -206,15 +207,17 @@ public class MapImplIterator<K,V> implements Map<K,V>, Iterable<Map.Entry<K,V>> 
 
     class MapIterator implements Iterator<Entry<K,V>> {
         private int curIndex=0;
-        private K[] array = keySet().getAll((K[]) new Object[0]); //Получаем все ключи в виде массива элементов множества
+        private K[] arrayKeys = keySet().getAll((K[]) new Object[0]); //Получаем все ключи в виде массива элементов множества
         @Override   //Создаёт пустой массив типа Object длиной 0 (Нужен только для передачи типа)
         public boolean hasNext() {
-            return curIndex < array.length;
+            return curIndex < arrayKeys.length;
         }
         @Override
         public Entry<K,V> next() {
-            K key = array[curIndex++];
-            System.out.println("ключ: " + key + ", значение: " + get(key));
+            if (!hasNext()){
+                throw new NoSuchElementException();
+            }
+            K key = arrayKeys[curIndex++];
             return new EntryImpl(key,get(key)); // Возвращаем Entry
         }
     }

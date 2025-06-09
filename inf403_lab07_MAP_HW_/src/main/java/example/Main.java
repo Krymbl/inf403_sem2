@@ -3,7 +3,7 @@ package example;
 public class Main {
     public static void main(String[] args) {
 
-        MapImpl<Integer, String> map = new MapImpl<>();
+        Map<Integer, String> map = new MapImpl<>();
         map.put(16,"16"); map.put(17,"17"); map.put(18,"18"); map.put(19,"19");
         map.put(20,"20"); map.put(21,"21"); map.put(22,"22"); map.put(23,"23");
         map.put(24,"24"); map.put(25,"25"); map.put(26,"26"); map.put(27,"27");

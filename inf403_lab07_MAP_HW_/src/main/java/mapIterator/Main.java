@@ -1,5 +1,7 @@
 package mapIterator;
 
+import example.Map;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -18,8 +20,8 @@ public class Main {
 //        System.out.println("Пустая ли мапа: " + map.isEmpty());
 //        System.out.println("Проверка наличия значения 20: " + map.containsValue("20"));
 
-        for(MapImplIterator.Entry<Integer, String> n : map) {
-            System.out.println(n);
+        for(Map.Entry<Integer, String> n : map) {
+            System.out.println("ключ: " + n.getKey() + ", значение: " + n.getValue());
         }
 
 //        System.out.println("Удаление элемента по ключу 17: " + map.remove(17));

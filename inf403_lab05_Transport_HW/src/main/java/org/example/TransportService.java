@@ -43,6 +43,50 @@ public class TransportService {
         return null;
     }
 
+    public List403Impl<Bus> readAllBus() throws FileNotFoundException {
+        Scanner sc = new Scanner(fileName);
+        List403Impl<Bus> result = new List403Impl<>();
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] str = line.split(";");
+            if (str[0].equals("bus")) {
+                result.add(new Bus(str[1], str[2], str[3], str[4]));
+            }
+        }
+
+        sc.close();
+        return result;
+    }
+
+    public List403Impl<Trolleybus> readAllTrolleybus() throws FileNotFoundException {
+        Scanner sc = new Scanner(fileName);
+        List403Impl<Trolleybus> result = new List403Impl<>();
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] str = line.split(";");
+            if (str[0].equals("trolleybus")) {
+                result.add(new Trolleybus(str[1], str[2], str[3], str[4]));
+            }
+        }
+
+        sc.close();
+        return result;
+    }
+
+    public List403Impl<Tram> readAllTram() throws FileNotFoundException {
+        Scanner sc = new Scanner(fileName);
+        List403Impl<Tram> result = new List403Impl<>();
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            String[] str = line.split(";");
+            if (str[0].equals("tram")) {
+                result.add(new Tram(str[1], str[2], str[3], str[4]));
+            }
+        }
+        sc.close();
+        return result;
+    }
+
     public void sortredRouteNumber() {
         List403Impl<Transport> list = readAll();
 

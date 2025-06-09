@@ -50,6 +50,6 @@ public class Track implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return number + ": " + name + " - " + author;
     }
 }

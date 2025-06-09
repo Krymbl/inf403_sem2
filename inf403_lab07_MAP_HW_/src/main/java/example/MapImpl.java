@@ -68,11 +68,11 @@ public class MapImpl<K,V> implements  Map<K,V> {
                 current = current.next; // Переходим к следующему узлу в цепочке
             }
 
-            if (prev == null) { //Добавляем новый узел в конец цепочки
-                array[index] = temp; //Проверяем, был ли список пуст, Если пуст - делаем новый узел головой списка
-            } else {
+//            if (prev == null) { //Добавляем новый узел в конец цепочки
+//                array[index] = temp; //Проверяем, был ли список пуст, Если пуст - делаем новый узел головой списка
+//            } else {
                 prev.next = temp; //Если список не пуст, Добавляем новый узел в конец цепочки
-            }
+//            }
         }
         size++;
     }
@@ -151,13 +151,12 @@ public class MapImpl<K,V> implements  Map<K,V> {
 
     @Override
     public boolean containsValue(V value) {  // Проверка наличия значения
-        for (int i = 0; i < array.length; i++){  // Обходим все корзины
-            Node<K, V> current = array[i];
-            while (current != null){  // Обходим все узлы
-                if (current.value.getValue().equals(value)){  //Если нашли значение, возвращаем true
+        for (Node<K, V> node: array){ //Обходим все корзины
+            while (node != null){ // Обходим все узлы в цепочке
+                if (node.value.getValue().equals(value)) {  //Если нашли значение, возвращаем true
                     return true;
                 }
-                current = current.next;
+                node = node.next;
             }
         }
         return false;

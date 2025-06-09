@@ -7,7 +7,8 @@ import java.util.Optional;
 
 public class Playlist {
 
-    private List<Track> playlist;
+    private List<Track> playlist = new ArrayList<>();
+    private File file = new File("Playlist.pst");
 
     public Playlist() {}
 
@@ -24,13 +25,18 @@ public class Playlist {
     }
 
     public  void load() {
+        if (!file.exists() || file.length() == 0) {
+            playlist = new ArrayList<>();
+            return;
+        }
+
         try (ObjectInputStream ois = new ObjectInputStream(
-                new FileInputStream("Playlist.pst"))) {
+                new FileInputStream(file))) {
             playlist = (List<Track>) ois.readObject();
         } catch (FileNotFoundException e) {
             playlist = new ArrayList<>();
         } catch (Exception e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
     }
 
@@ -41,10 +47,14 @@ public class Playlist {
 
     }
     public void showAll() {
+        if (playlist.size() == 0) {
+            System.out.println("Плейлист пустой");
+        } else {
         for(Track track : playlist) {
             System.out.println(track.getNumber() + ": " +
-                    track.getName() + ", " +
+                    track.getName() + " - " +
                     track.getAuthor());
+        }
         }
     }
 
@@ -52,22 +62,28 @@ public class Playlist {
         playlist.stream()
                 .filter(p -> p.getName().toUpperCase().contains(name.toUpperCase()))
                 .forEach(track -> System.out.println(track.getNumber() + ": " +
-                        track.getName() + ", " +
+                        track.getName() + " - " +
                         track.getAuthor()));
     }
 
     public void findByAuthor(String author) {
         playlist.stream()
-                .filter(p -> p.getName().toUpperCase().contains(author.toUpperCase()))
+                .filter(p -> p.getAuthor().toUpperCase().contains(author.toUpperCase()))
                 .forEach(track -> System.out.println(track.getNumber() + ": " +
-                        track.getName() + ", " +
+                        track.getName() + " - " +
                         track.getAuthor()));
     }
 
-    public Optional<Track> findByNumber(Integer number) {
+    public Track findByNumber(Integer number) {
         return
         playlist.stream()
                 .filter(track -> track.getNumber().equals(number))
-                .findFirst();
+                .findFirst()
+                .get();
+    }
+
+    public void clear () {
+        playlist = new ArrayList<>();
+        save();
     }
 }

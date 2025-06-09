@@ -35,12 +35,17 @@
         <option value="$PROJECT_DIR$/inf403_GameSave_HW/pom.xml" />
         <option value="$PROJECT_DIR$/ControlWork/pom.xml" />
         <option value="$PROJECT_DIR$/inf403_lab05_Transport_HW/pom.xml" />
+        <option value="$PROJECT_DIR$/Inf403_lab12_WithNetHW_Socket/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_Tests_HW/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_DB_HW/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_lab19_Refl/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/Dopka/pom.xml" />
         <option value="$PROJECT_DIR$/Temp/pom.xml" />
+        <option value="$PROJECT_DIR$/inf403_Tests_HW/pom.xml" />
         <option value="$PROJECT_DIR$/inf403_lab06/pom.xml" />
         <option value="$PROJECT_DIR$/inf403_lab07_MAP_HW2/pom.xml" />
         <option value="$PROJECT_DIR$/inf403_lab09/pom.xml" />
