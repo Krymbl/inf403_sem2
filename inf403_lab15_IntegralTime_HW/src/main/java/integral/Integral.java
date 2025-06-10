@@ -4,9 +4,6 @@ import java.util.function.Consumer;
 
 public class Integral implements Consumer<Double> {
 
-
-
-
     private static int N;
     private volatile double integral = 0;
 

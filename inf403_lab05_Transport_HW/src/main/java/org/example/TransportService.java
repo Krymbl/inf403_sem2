@@ -12,13 +12,15 @@ public class TransportService {
         this.fileName = new File(fileName);
     }
 
+
+    //Считывание всех транспортов
     public List403Impl<Transport> readAll() {
         try {
 
             Scanner sc = new Scanner(fileName);
             List403Impl<Transport> result = new List403Impl<>();
 
-            if (sc.hasNextLine()) {
+            if (sc.hasNextLine()) { //Пропускам заголовок в файле
                 sc.nextLine();
             }
 
@@ -87,7 +89,7 @@ public class TransportService {
         return result;
     }
 
-    public void sortredRouteNumber() {
+    public void sortredRouteNumber() { //Упорядоченный вид номера маршрутов, время начала и окончнания движения маршрута
         List403Impl<Transport> list = readAll();
 
         if (list == null || list.size() == 0) {
@@ -112,7 +114,8 @@ public class TransportService {
         }
     }
 
-    public void sortredNumber() {
+    public void sortredNumber() {  //Упорядоченном вид парковые номера и время начала движения
+
         List403Impl<Transport> list = readAll();
 
         if (list == null || list.size() == 0) {
@@ -139,7 +142,7 @@ public class TransportService {
     }
 
 
-    public void printUniqRouteNumber() {
+    public void printUniqRouteNumber() { // По списку вывести кол-во разных маршрутов
 
         List403Impl<Transport> list = readAll();
         SetImpl<String> set = new SetImpl<>();
@@ -154,7 +157,7 @@ public class TransportService {
     }
 
 
-    public void printUniqTransport()  {
+    public void printUniqTransport()  { //кол-во разных транспортных средств
         List403Impl<Transport> list = readAll();
         SetImpl<String> set = new SetImpl<>();
 
@@ -168,7 +171,7 @@ public class TransportService {
 
     }
 
-    public void printCntTransp() {
+    public void printCntTransp() { //номер маршрута и кол-во транспортных средств на нем
         List403Impl<Transport> list = readAll();
 
         if (list == null || list.size() == 0) {

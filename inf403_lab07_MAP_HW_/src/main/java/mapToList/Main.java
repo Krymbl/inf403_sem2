@@ -1,35 +1,20 @@
 package mapToList;
 
 import example.List403;
-import example.List403Impl;
-import mapIterator.MapImplIterator;
-import java.util.Arrays;
-import example.Map;
 
 public class Main {
     public static void main(String[] args) {
 
-        MapImplIterator<Integer, String> map = new MapImplIterator<>();
+        MapImplToList<Integer, String> map = new MapImplToList<>();
         map.put(16,"16"); map.put(17,"17"); map.put(18,"18"); map.put(19,"19");
         map.put(20,"20"); map.put(21,"21"); map.put(22,"22"); map.put(23,"23");
         map.put(24,"24"); map.put(25,"25"); map.put(26,"26"); map.put(27,"27");
         map.put(28,"28"); map.put(29,"29"); map.put(30,"30"); map.put(31,"31");
         map.put(32,"32");
 
-        Integer[] array = map.keySet().getAll(new Integer[0]); //Получаем все ключи в виде массива элементов множества\
-        // Создаёт пустой массив типа Integer длиной 0 (Нужен только для передачи типа)
-
-        System.out.println(Arrays.toString(array));
-
-        List403<String> list = map.values();
+        List403<String> list = map.map(string -> (string + "1"));
         System.out.println(list);
 
-
-        List403<String> list2 = new List403Impl();
-        for(Map.Entry<Integer, String> n : map) {
-            list2.add(n.getValue());
-        }
-        System.out.println(list2);
 
 
 

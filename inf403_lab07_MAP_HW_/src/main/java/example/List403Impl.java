@@ -1,6 +1,9 @@
 package example;
 
-public class List403Impl<T> implements List403<T> {
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class List403Impl<T> implements List403<T>, Iterable <T> {
     private Object[] values;
     private int size;
 
@@ -68,6 +71,24 @@ public class List403Impl<T> implements List403<T> {
         }
 
         return stringBuilder.toString();
+    }
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private int currentIndex = 0;
+            @Override
+            public boolean hasNext() {
+                return currentIndex < size(); // Используем ваш метод size()
+            }
+
+            @Override
+            public T next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                return get(currentIndex++);
+            }
+        };
     }
 
 }

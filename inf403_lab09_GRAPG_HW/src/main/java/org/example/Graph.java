@@ -17,8 +17,7 @@ public class Graph implements Iterable<Character> {
         graph.put('c', new HashSet<>());
         graph.put('b', new HashSet<>(Set.of('g', 'f', 'c', 'a')));
     }
-    // {{d, null}}}
-    //res: {d,
+
     public Set<Character> topolSort(){
         Set<Character> res = new LinkedHashSet<>(); //результат сортировки (вершины в порядке топологической сортировки)
         Map<Character, Set<Character>> temp = new HashMap<>(); //временная копия графа для работы.

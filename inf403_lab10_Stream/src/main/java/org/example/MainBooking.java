@@ -102,7 +102,7 @@ public class MainBooking {
                 .forEach(e -> System.out.println(e.getKey() + " " + e.getValue()));
     }
 
-    //ToDo 1 кол-во бронирований отелей женщинами
+    //ToDo 1 список гостиниц и кол-во бронирований женщинами
 
     public static void printHotelByWomen(Bookings bookings){
         Map<String, Integer> result =
@@ -174,8 +174,6 @@ public class MainBooking {
         System.out.println((double) count / bookings.getBookings().size() * 100 + " % ");
     }
     // ToDo 5. Вывести список городов и кол-во бронирований по ним (город ~ г ...)
-    //В файле не указано, в какой город идет бронь/ в каком городе находится отель,
-    // поэтому я выведу из какого города больше всего броней
     public static void printCountCity(Bookings bookings){
         bookings.getBookings()
                 .stream()
@@ -196,23 +194,10 @@ public class MainBooking {
                         // возвращает Collector, который собирает элементы в Map<K, List<T>>,
                         b -> b.getHotel().getName(), //ключом в Map будет имя отеля (извлекается из каждого Booking).
                         Collectors.mapping( //преобразования элементов перед их сбором в коллекцию
-
-                                //Collectors.mapping(
-                                //    Функция_преобразования,
-                                //    Коллектор_для_сбора_результатов
-                                //)
-
                                 b -> b.getPerson().getFromcity(), //извлекает город (fromcity) человека из бронирования.
-                                Collectors.collectingAndThen(
-
-                                        //Сначала собрать элементы с помощью обычного коллектора
+                                Collectors.collectingAndThen( //Сначала собрать элементы с помощью обычного коллектора
                                         //Затем применить финальное преобразование к результату сбора
-                                        //Collectors.collectingAndThen(
-                                        //    Коллектор_для_сбора,
-                                        //    Функция_финального_преобразования
-                                        //)
-
-                                        Collectors.toSet(), //Удаляем дубликаты (Сохраняем города в set)
+                                        Collectors.toSet(), //Удаляем дубликаты (Сохраняем все города в set)
                                         ArrayList::new //преобразует Set городов в ArrayList
                                         // (чтобы значение Map было именно List<String>, а не Set<String>).
                                 )

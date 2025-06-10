@@ -8,5 +8,6 @@
     <mapping directory="$PROJECT_DIR$/inf403_lab02HW2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/inf403_lab03" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/inf403_lab03HW" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/inf403_lab17_musikPlayer" vcs="Git" />
   </component>
 </project>
