@@ -116,8 +116,8 @@ public class MapImplToList<K,V> implements Map<K,V> {
     }
 
     @Override
-    public List403Impl<V> values() { // список значений
-        List403Impl<V> values = new List403Impl<>();
+    public List403<V> values() { // список значений
+        List403<V> values = new List403Impl<>();
         for (int i = 0; i < array.length; i++) {
             Node<K, V> current = array[i];
             while (current != null) {

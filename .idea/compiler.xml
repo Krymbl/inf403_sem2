@@ -7,29 +7,31 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ControlWork" />
-        <module name="inf403_GameSave_HW" />
         <module name="inf403_lab07_MAP_HW_" />
-        <module name="testMine" />
         <module name="inf403_lab03HW" />
         <module name="inf403_lab02HW2" />
+        <module name="inf403_GRAPH_HW" />
         <module name="inf403_lab02HW" />
-        <module name="Inf403_lab14" />
         <module name="inf403_lab17_musikPlayer" />
         <module name="inf403_lab08" />
+        <module name="inf403_lab04" />
+        <module name="inf403_lab12_HW" />
+        <module name="inf403_lab01" />
+        <module name="inf403_lab03" />
+        <module name="inf403_lab05_Transport_HW" />
+        <module name="Inf403_lab12_WithNetHW_Socket" />
+        <module name="inf403_TESTS_HW" />
+        <module name="inf403_GameSave_HW" />
+        <module name="testMine" />
+        <module name="Inf403_lab14" />
         <module name="inf403_lab09_GRAPG_HW" />
         <module name="inf403_lab16" />
-        <module name="inf403_lab04" />
         <module name="inf403_lab15" />
         <module name="inf403_lab18" />
         <module name="inf403_lab19_Refl" />
-        <module name="inf403_lab12_HW" />
-        <module name="inf403_lab01" />
         <module name="inf403_lab10_Stream" />
-        <module name="inf403_lab03" />
         <module name="inf403_lab13" />
-        <module name="inf403_lab05_Transport_HW" />
         <module name="inf403_DB_HW" />
-        <module name="Inf403_lab12_WithNetHW_Socket" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

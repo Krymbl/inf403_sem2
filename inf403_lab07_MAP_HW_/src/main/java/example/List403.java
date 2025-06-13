@@ -1,6 +1,6 @@
 package example;
 
-public interface List403 <T> {
+public interface List403 <T> extends Iterable<T>{
 
     /**
      * Метод добавляет элемент в конец списка
